@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11815E4B-9CA1-4191-8A3F-E4692465EB7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TutoriasV2</RootNamespace>
+    <AssemblyName>TutoriasV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>user.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alunos.cs" />
+    <Compile Include="Apoios.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="Dashboard_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Admin.Designer.cs">
+      <DependentUpon>Dashboard_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Al.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Al.Designer.cs">
+      <DependentUpon>Dashboard_Al.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Tut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Tut.Designer.cs">
+      <DependentUpon>Dashboard_Tut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplinas.cs" />
+    <Compile Include="Form_Aceitar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Aceitar.Designer.cs">
+      <DependentUpon>Form_Aceitar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Aprov_Al.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Aprov_Al.Designer.cs">
+      <DependentUpon>Form_Aprov_Al.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Aprov_Ap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Aprov_Ap.Designer.cs">
+      <DependentUpon>Form_Aprov_Ap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cancel_Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cancel_Pedido.Designer.cs">
+      <DependentUpon>Form_Cancel_Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Create_AL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Create_AL.Designer.cs">
+      <DependentUpon>Form_Create_AL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Create_Ap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Create_Ap.Designer.cs">
+      <DependentUpon>Form_Create_Ap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Edit_Al.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Edit_Al.Designer.cs">
+      <DependentUpon>Form_Edit_Al.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Edit_Ap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Edit_Ap.Designer.cs">
+      <DependentUpon>Form_Edit_Ap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Edit_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Edit_Perfil.Designer.cs">
+      <DependentUpon>Form_Edit_Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HistAval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HistAval.Designer.cs">
+      <DependentUpon>Form_HistAval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pedir_ApAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pedir_ApAL.Designer.cs">
+      <DependentUpon>Form_Pedir_ApAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pedir_ApTUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pedir_ApTUT.Designer.cs">
+      <DependentUpon>Form_Pedir_ApTUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Register_Al.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Register_Al.Designer.cs">
+      <DependentUpon>Form_Register_Al.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Startup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Startup.Designer.cs">
+      <DependentUpon>Form_Startup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard_Admin.resx">
+      <DependentUpon>Dashboard_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_Al.resx">
+      <DependentUpon>Dashboard_Al.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_Tut.resx">
+      <DependentUpon>Dashboard_Tut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Aceitar.resx">
+      <DependentUpon>Form_Aceitar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Aprov_Al.resx">
+      <DependentUpon>Form_Aprov_Al.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Aprov_Ap.resx">
+      <DependentUpon>Form_Aprov_Ap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cancel_Pedido.resx">
+      <DependentUpon>Form_Cancel_Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Create_AL.resx">
+      <DependentUpon>Form_Create_AL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Create_Ap.resx">
+      <DependentUpon>Form_Create_Ap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Edit_Al.resx">
+      <DependentUpon>Form_Edit_Al.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Edit_Ap.resx">
+      <DependentUpon>Form_Edit_Ap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Edit_Perfil.resx">
+      <DependentUpon>Form_Edit_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HistAval.resx">
+      <DependentUpon>Form_HistAval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pedir_ApAL.resx">
+      <DependentUpon>Form_Pedir_ApAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pedir_ApTUT.resx">
+      <DependentUpon>Form_Pedir_ApTUT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Register_Al.resx">
+      <DependentUpon>Form_Register_Al.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Startup.resx">
+      <DependentUpon>Form_Startup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="user.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

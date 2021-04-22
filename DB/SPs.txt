@@ -1,0 +1,22 @@
+//Inserir aluno
+CREATE PROCEDURE InsertAl @AlunoID varchar(50), @Nome varchar(50), @Turma varchar(50), @DataNasc varchar(50), @Telefone varchar(50), @Morada varchar(50), @Password varchar(50), @Tipo varchar(50), @Aprovado bit
+AS
+Insert into Aluno values (@AlunoID, @Nome, @Turma, @DataNasc, @Telefone, @Morada, @Password, @Tipo, @Aprovado)
+
+//Eliminar Aluno
+Create procedure RemoveAl @AlunoID varchar(50)
+as
+Delete from Apoio where AlunoID=@AlunoID
+Delete from Apoio where TutorID=@AlunoID
+Delete from Aluno where AlunoID=@AlunoID
+
+//Adicionar Apoio
+Create procedure InsertAp @ApoioID int, @Sigla varchar(50), @Descricao varchar(50), @ReqDate date, @AlunoID varchar(50), @TutorID varchar(50), @Estado varchar(50), @Local varchar(50), @Avaliacao varchar(50), @Criado varchar(50)
+as
+Insert into Apoio values (@ApoioID, @Sigla, @Descricao, @ReqDate, @AlunoID, @TutorID, @Estado, @Local, @Avaliacao, @Criado)
+
+//Eliminar Apoio
+Create procedure RemoveAp @ApoioID int
+as 
+Delete from Apoio where ApoioID=@ApoioID
+
